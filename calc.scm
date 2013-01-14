@@ -41,10 +41,8 @@
   'done
 )
 
-
 (define make-scheme-number (lambda (n)
   ((get 'make '(scheme-number)) n)))
-
 
 ;;rational
 (define (install-rational-package)
@@ -122,7 +120,6 @@
 (define make-real (lambda (n)
   ((get 'make '(real)) n)))
 
-
 ;;complex
 (define (install-complex-package)
   ;from rectangular and polar
@@ -146,7 +143,6 @@
                        (- (angle z1) (angle z2)))))
   (define equ? (lambda (x y) (apply-generic 'equ? x y)))
   (define =zero? (lambda (x) (apply-generic '=zero? x)))
-
 
   ;others
   (define tag (lambda (z) (attach-tag 'complex z)))
@@ -279,7 +275,6 @@
           (error
           "No method for these types -- APPLY-GENERIC"
                  (list op type-tags))))))))
-
 
 ;install
 (install-scheme-number-package)
