@@ -1,0 +1,1 @@
+: %s/(define (\([^ ]*\) \(.*\))/(define \1 (lambda (\2)/gc

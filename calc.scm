@@ -1,29 +1,27 @@
-;2.5.2 2.82から　141(117)kara
-
-(define (attach-tag type-tag contents)
+(define attach-tag (lambda (type-tag contents)
   (if (eq? type-tag 'scheme-number)
     contents
-    (cons type-tag contents)))
-(define (type-tag datum)
+    (cons type-tag contents))))
+(define type-tag (lambda (datum)
   (cond
     ((pair? datum) (car datum))
     ((number? datum) 'scheme-number)
-    (else (error "Bad tagged datum -- TYPE-TAG" datum))))
-(define (contents datum)
+    (else (error "Bad tagged datum -- TYPE-TAG" datum)))))
+(define contents (lambda (datum)
   (cond
     ((pair? datum) (cdr datum))
     ((number? datum) datum)
-    (else (error "Bad tagged datum -- CONTENTS" datum))))
+    (else (error "Bad tagged datum -- CONTENTS" datum)))))
 
-(define (add x y) (apply-generic 'add x y))
-(define (sub x y) (apply-generic 'sub x y))
-(define (mul x y) (apply-generic 'mul x y))
-(define (div x y) (apply-generic 'div x y))
-(define (raise x) (apply-generic 'raise x))
+(define add (lambda (x y) (apply-generic 'add x y)))
+(define sub (lambda (x y) (apply-generic 'sub x y)))
+(define mul (lambda (x y) (apply-generic 'mul x y)))
+(define div (lambda (x y) (apply-generic 'div x y)))
+(define raise (lambda (x) (apply-generic 'raise x)))
 
 ;;scheme-number
 (define (install-scheme-number-package)
-  (define (tag x) (attach-tag 'scheme-number x))
+  (define tag (lambda (x) (attach-tag 'scheme-number x)))
   (put 'add '(scheme-number scheme-number)
     (lambda (x y) (tag (+ x y))))
   (put 'sub '(scheme-number scheme-number)
@@ -44,39 +42,39 @@
 )
 
 
-(define (make-scheme-number n)
-  ((get 'make '(scheme-number)) n))
+(define make-scheme-number (lambda (n)
+  ((get 'make '(scheme-number)) n)))
 
 
 ;;rational
 (define (install-rational-package)
   ;private
-  (define (numer x) (car x))
-  (define (denom x) (cdr x))
-  (define (make-rat n d)
+  (define numer (lambda (x) (car x)))
+  (define denom (lambda (x) (cdr x)))
+  (define make-rat (lambda (n d)
     (let ((g (gcd n d)))
-      (cons (/ n g) (/ d g))))
-  (define (numer x) (car x))
-  (define (denom x) (cdr x))
-  (define (add-rat x y)
+      (cons (/ n g) (/ d g)))))
+  (define numer (lambda (x) (car x)))
+  (define denom (lambda (x) (cdr x)))
+  (define add-rat (lambda (x y)
     (make-rat (+ (* (numer x) (denom y))
                  (* (numer y) (denom x)))
-              (* (denom x) (denom y))))
-  (define (sub-rat x y)
+              (* (denom x) (denom y)))))
+  (define sub-rat (lambda (x y)
     (make-rat (- (* (numer x) (denom y))
                  (* (numer y) (denom x)))
-              (* (denom x) (denom y))))
-  (define (mul-rat x y)
+              (* (denom x) (denom y)))))
+  (define mul-rat (lambda (x y)
     (make-rat (* (numer x) (numer y))
-              (* (denom x) (denom y))))
-  (define (div-rat x y)
+              (* (denom x) (denom y)))))
+  (define div-rat (lambda (x y)
     (make-rat (* (numer x) (denom y))
-              (* (denom x) (numer y))))
-  (define (equ? x y) (apply-generic 'equ? x y))
-  (define (=zero? x) (apply-generic '=zero? x))
+              (* (denom x) (numer y)))))
+  (define equ? (lambda (x y) (apply-generic 'equ? x y)))
+  (define =zero? (lambda (x) (apply-generic '=zero? x)))
 
   ;others
-  (define (tag x) (attach-tag 'rational x))
+  (define tag (lambda (x) (attach-tag 'rational x)))
   (put 'add '(rational rational)
        (lambda (x y) (tag (add-rat x y))))
   (put 'sub '(rational rational)
@@ -96,12 +94,12 @@
   'done
 )
 
-(define (make-rational n d)
-  ((get 'make '(rational)) n d))
+(define make-rational (lambda (n d)
+  ((get 'make '(rational)) n d)))
 
 ;;real
 (define (install-real-package)
-  (define (tag x) (attach-tag 'real x))
+  (define tag (lambda (x) (attach-tag 'real x)))
   (put 'add '(real real)
     (lambda (x y) (tag (+ x y))))
   (put 'sub '(real real)
@@ -121,37 +119,37 @@
   'done
 )
 
-(define (make-real n)
-  ((get 'make '(real)) n))
+(define make-real (lambda (n)
+  ((get 'make '(real)) n)))
 
 
 ;;complex
 (define (install-complex-package)
   ;from rectangular and polar
-  (define (make-from-real-imag x y)
-    ((get 'make-from-real-imag 'rectangular) x y))
-  (define (make-from-mag-ang r a)
-    ((get 'make-from-mag-ang 'polar) r a))
+  (define make-from-real-imag (lambda (x y)
+    ((get 'make-from-real-imag 'rectangular) x y)))
+  (define make-from-mag-ang (lambda (r a)
+    ((get 'make-from-mag-ang 'polar) r a)))
   
   ;private
-  (define (add-complex z1 z2)
+  (define add-complex (lambda (z1 z2)
     (make-from-real-imag (+ (real-part z1) (real-part z2))
-                         (+ (imag-part z1) (imag-part z2))))
-  (define (sub-complex z1 z2)
+                         (+ (imag-part z1) (imag-part z2)))))
+  (define sub-complex (lambda (z1 z2)
     (make-from-real-imag (- (real-part z1) (real-part z2))
-                         (- (imag-part z1) (imag-part z2))))
-  (define (mul-complex z1 z2)
+                         (- (imag-part z1) (imag-part z2)))))
+  (define mul-complex (lambda (z1 z2)
     (make-from-mag-ang (* (magnitude z1) (magnitude z2))
-                       (+ (angle z1) (angle z2))))
-  (define (div-complex z1 z2)
+                       (+ (angle z1) (angle z2)))))
+  (define div-complex (lambda (z1 z2)
     (make-from-mag-ang (/ (magnitude z1) (magnitude z2))
-                       (- (angle z1) (angle z2))))
-  (define (equ? x y) (apply-generic 'equ? x y))
-  (define (=zero? x) (apply-generic '=zero? x))
+                       (- (angle z1) (angle z2)))))
+  (define equ? (lambda (x y) (apply-generic 'equ? x y)))
+  (define =zero? (lambda (x) (apply-generic '=zero? x)))
 
 
   ;others
-  (define (tag z) (attach-tag 'complex z))
+  (define tag (lambda (z) (attach-tag 'complex z)))
   (put 'real-part '(complex) real-part)
   (put 'imag-part '(complex) imag-part)
   (put 'magnitude '(complex) magnitude)
@@ -177,39 +175,39 @@
   'done
 )
 
-(define (make-complex-from-real-imag x y)
-  ((get 'make-complex-from-real-imag '(complex)) x y))
-(define (make-complex-from-mag-ang r a)
-  ((get 'make-complex-from-mag-ang '(complex)) r a))
+(define make-complex-from-real-imag (lambda (x y)
+  ((get 'make-complex-from-real-imag '(complex)) x y)))
+(define make-complex-from-mag-ang (lambda (r a)
+  ((get 'make-complex-from-mag-ang '(complex)) r a)))
 
-(define (real-part z) (apply-generic 'real-part z))
-(define (imag-part z) (apply-generic 'imag-part z))
-(define (magnitude z) (apply-generic 'magnitude z))
-(define (angle z) (apply-generic 'angle z))
+(define real-part (lambda (z) (apply-generic 'real-part z)))
+(define imag-part (lambda (z) (apply-generic 'imag-part z)))
+(define magnitude (lambda (z) (apply-generic 'magnitude z)))
+(define angle (lambda (z) (apply-generic 'angle z)))
 
-(define (rectangular? z)
-  (eq? (type-tag z) 'rectangular))
-(define (polar? z)
-  (eq? (type-tag z) 'polar))
+(define rectangular? (lambda (z)
+  (eq? (type-tag z) 'rectangular)))
+(define polar? (lambda (z)
+  (eq? (type-tag z) 'polar)))
 
 ;rectangular
 (define (install-rectangular-package)
   ;private
-  (define (real-part z) (car z))
-  (define (imag-part z) (cdr z))
-  (define (magnitude z)
+  (define real-part (lambda (z) (car z)))
+  (define imag-part (lambda (z) (cdr z)))
+  (define magnitude (lambda (z)
    (sqrt (+ (square (real-part z))
-            (square (imag-part z)))))
-  (define (angle z)
-   (atan (imag-part z) (real-part z)))
-  (define (make-from-real-imag x y) (cons x y))
-  (define (make-from-mag-ang r a)
-    (cons (* r (cos a)) (* r (sin a))))
-  (define (equ? x y) (apply-generic 'equ? x y))
-  (define (=zero? x) (apply-generic '=zero? x))
+            (square (imag-part z))))))
+  (define angle (lambda (z)
+   (atan (imag-part z) (real-part z))))
+  (define make-from-real-imag (lambda (x y) (cons x y)))
+  (define make-from-mag-ang (lambda (r a)
+    (cons (* r (cos a)) (* r (sin a)))))
+  (define equ? (lambda (x y) (apply-generic 'equ? x y)))
+  (define =zero? (lambda (x) (apply-generic '=zero? x)))
 
   ;others
-  (define (tag x) (attach-tag '(rectangular) x))
+  (define tag (lambda (x) (attach-tag '(rectangular) x)))
   (put 'real-part '(rectangular) real-part)
   (put 'imag-part '(rectangular) imag-part)
   (put 'magnitude '(rectangular) magnitude)
@@ -228,21 +226,21 @@
 ;polar
 (define (install-polar-package)
   ;private
-  (define (magnitude z) (car z))
-  (define (angle z) (cdr z))
-  (define (make-from-mag-ang r a) (cons r a))
-  (define (real-part z)
-    (* (magnitude z) (cos (angle z))))
-  (define (imag-part z)
-    (* (magnitude z) (sin (angle z))))
-  (define (make-from-real-imag x y)
+  (define magnitude (lambda (z) (car z)))
+  (define angle (lambda (z) (cdr z)))
+  (define make-from-mag-ang (lambda (r a) (cons r a)))
+  (define real-part (lambda (z)
+    (* (magnitude z) (cos (angle z)))))
+  (define imag-part (lambda (z)
+    (* (magnitude z) (sin (angle z)))))
+  (define make-from-real-imag (lambda (x y)
     (cons (sqrt (+ (square x) (square y)))
-          (atan y x))  )
-  (define (equ? x y) (apply-generic 'equ? x y))
-  (define (=zero? x) (apply-generic '=zero? x))
+          (atan y x))  ))
+  (define equ? (lambda (x y) (apply-generic 'equ? x y)))
+  (define =zero? (lambda (x) (apply-generic '=zero? x)))
 
   ;others
-  (define (tag x) (attach-tag 'polar x))
+  (define tag (lambda (x) (attach-tag 'polar x)))
   (put 'real-part '(polar) real-part)
   (put 'imag-part '(polar) imag-part)
   (put 'magnitude '(polar) magnitude)
@@ -258,7 +256,7 @@
   'done
 )
 
-(define (apply-generic op . args)
+(define apply-generic (lambda (op . args)
   (let ((type-tags (map type-tag args)))
     (let ((proc (get op type-tags)))
       (if proc
@@ -280,7 +278,7 @@
                    (list op type-tags)))))
           (error
           "No method for these types -- APPLY-GENERIC"
-                 (list op type-tags)))))))
+                 (list op type-tags))))))))
 
 
 ;install
