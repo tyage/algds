@@ -1,0 +1,119 @@
+\documentclass[a4paper,12pt]{article}
+\textheight 25cm
+\topmargin -2cm
+\usepackage{listings}
+\usepackage{alltt}
+
+\begin{document}
+\begin{center}\large\bf
+\LaTeX でのプログラムコードの引用方法
+\end{center}
+\hfill Oct. 4, 2010 奥乃 博
+
+\section{概要}
+今, プログラムが fact.scm というファイルに格納されているとする. 
+そのプログラムをレポートに引用したい時には {\tt listings} という
+パッケージを使用するとよい. そうすれば, ファイルに入れたプログラムを
+そのままSchemeで実行することもでき, レポートにも使用することができる. 
+
+本 \LaTeX ソース一式は, 下記のページに置いてある. 
+\begin{alltt}
+http://winnie.kuis.kyoto-u.ac.jp/~okuno/Lecture/10/IntroAlgDs/
+\end{alltt}
+
+\section{listings の例}
+
+\subsection{1番目の例}
+
+\begin{verbatim}
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+
+\begin{document}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{fact.scm}
+\end{document}
+
+\end{verbatim}
+{\bf の出力は下記の通り: }
+
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{fact.scm}
+
+\bigskip
+このプログラムは，次の定義式をそのままScheme プログラムに翻訳したものである．
+\begin{eqnarray}
+fact(n) &=& 1 \hspace*{1cm} \mbox{if } n \leq 0 \\
+        & & n \times fact(n-1) \hspace*{1cm} \mbox{otherwise} 
+\end{eqnarray}
+
+\subsection{2番目の例}
+
+\begin{verbatim}
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+
+\begin{document}
+\lstset{basicstyle=\small,numbers=left,numberstyle=\tiny,stepnumber=1,
+        numbersep=10pt}
+\lstinputlisting{fact.scm}
+
+\end{document}
+\end{verbatim}
+{\bf の出力は下記の通り: }
+
+\lstset{basicstyle=\small,numbers=left,numberstyle=\tiny,stepnumber=1,
+        numbersep=10pt}
+\lstinputlisting[frame=single]{fact.scm}
+
+\subsection{3番目の例}
+
+\begin{verbatim}
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+
+\begin{document}
+\lstset{basicstyle=\small,numbers=left,numberstyle=\tiny,stepnumber=1,
+numbersep=10pt,frameround=fttt,frame=rBL}
+\lstinputlisting[frame=single]{fact.scm}
+\end{document}
+\end{verbatim}
+{\bf の出力は下記の通り: }
+
+\lstset{basicstyle=\small,numbers=left,numberstyle=\tiny,stepnumber=1,
+numbersep=10pt,frameround=fttt,frame=rBL}
+\lstinputlisting[frame=single]{fact.scm}
+
+\subsection{4番目の例}
+
+\begin{verbatim}
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+
+\begin{document}
+\lstset{basicstyle=\small,numbers=left,numberstyle=\tiny,stepnumber=1,
+numbersep=10pt,frameround=fttt,frame=rBL}
+\lstinputlisting[caption={Factorial by recursion},label=fact]{fact.scm}
+\end{document}
+\end{verbatim}
+{\bf の出力は下記の通り: }
+
+\lstset{basicstyle=\small,numbers=left,numberstyle=\tiny,stepnumber=1,
+numbersep=10pt,frameround=fttt,frame=rBL}
+\lstinputlisting[caption={Factorial by recursion},label=fact]{fact.scm}
+
+
+\end{document}
+
+% Local Variables:
+% mode: latex
+% tex-command: "platex"
+% tex-directory: "./"
+% tex-dvi-print-command: "dvips -olisting-example.ps listing-example &"
+% TeX-dvi-print-command: "dvips -olisting-example.ps listing-example &"
+% tex-dvi-print-command: "dvips -olisting-example.ps listing-example &"
+% TeX-dvi-print-command: "dvips -olisting-example.ps listing-example &"
+% End:

@@ -1,0 +1,147 @@
+(define variable? (lambda (x) (symbol? x)))
+(define same-variable? (lambda (x y)
+	(and (variable? x) (eq? x y))
+))
+(define =number? (lambda (exp num) 
+	(and (number? exp) (= exp num))
+))
+
+(define sum? (lambda (x)
+	(and (pair? x) (eq? (car x) '+) )
+))
+(define subtract? (lambda (x)
+	(and (pair? x) (eq? (car x) '-))
+))
+(define product? (lambda (x)
+	(and (pair? x) (eq? (car x) '*))
+))
+(define division? (lambda (x)
+	(and (pair? x) (eq? (car x) '/))
+))
+(define exponentiation? (lambda (x)
+	(and (pair? x) (eq? (car x) '**))
+))
+
+(define make-sum (lambda (x y)
+	(cond 
+		((=number? x 0) y)
+		((=number? y 0) x)
+		((and (number? x) (number? y)) (+ x y))
+		(else (list '+ x y))
+	)
+))
+
+(define make-subtract (lambda (x y)
+	(cond 
+		((=number? x 0) (- y))
+		((=number? y 0) x)
+		((and (number? x) (number? y)) (- x y))
+		(else (list '- x y))
+	)
+))
+
+(define make-product (lambda (x y)
+	(cond 
+		((or (=number? x 0) (=number? y 0)) 0)
+		((=number? x 1) y)
+		((=number? y 1) x)
+		((and (number? x) (number? y)) (* x y))
+		(else (list '* x y))
+	)
+))
+
+(define make-division (lambda (x y)
+	(cond 
+		((=number? x 0) 0)
+		((=number? y 1) x)
+		((and (number? x) (number? y)) (/ x y))
+		(else (list '/ x y))
+	)
+))
+
+(define make-exponentiation (lambda (b e)
+	(cond 
+		((=number? e 0) 1)
+		((=number? e 1) b)
+		((=number? b 1) 1)
+		((and (number? b) (number? e)) (** b e))
+		(else (list '** b e))
+	)
+))
+
+(define addend (lambda (x) (cadr x)))
+(define augend (lambda (x) (caddr x)))
+(define minuend (lambda (x) (cadr x)))
+(define subtrahend (lambda (x) (caddr x)))
+(define dividend (lambda (x) (cadr x)))
+(define divisor (lambda (x) (caddr x)))
+(define multiplicant (lambda (x) (cadr x)))
+(define multiplier (lambda (x) (caddr x)))
+(define base (lambda (x) (cadr x)))
+(define exponent (lambda (x) (caddr x)))
+
+(define deriv (lambda (exp var)
+	(cond 
+		((number? exp) 0) 
+		((variable? exp)
+			(if (same-variable? exp var) 1 0)
+		)
+		((sum? exp)
+			(make-sum 
+				(deriv (addend exp) var)
+				(deriv (augend exp) var)
+			)
+		)
+		((subtract? exp)
+			(make-sum 
+				(deriv (minuend exp) var)
+				(make-product -1 (deriv (subtrahend exp) var))
+			)
+		)
+		((product? exp)
+			(make-sum
+				(make-product 
+					(multiplier exp)
+					(deriv (multiplicant exp) var)
+				)
+				(make-product 
+					(deriv (multiplier exp) var)
+					(multiplicant exp)
+				)
+			)
+		)
+		((division? exp)
+			(make-sum
+				(make-division
+					(make-product
+						(make-product -1 (dividend exp))
+						(deriv (divisor exp) var)
+					)
+					(make-product
+						(divisor exp)
+						(divisor exp)
+					)
+				)
+				(make-product
+					(make-division 1 (divisor exp))
+					(deriv (dividend exp) var)
+				)
+			)
+		)
+		((exponentiation? exp)
+			(make-product
+				(make-product
+					(exponent exp)
+					(deriv (base exp) var)
+				)
+				(make-exponentiation
+					(base exp)
+					(make-sum (exponent exp) -1)
+				)
+			)
+		)
+		(else 
+			(error "unknown expression type - DERIV" exp )
+		)
+	)
+))

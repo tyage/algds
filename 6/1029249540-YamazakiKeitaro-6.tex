@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+\title{アルゴリズムとデータ構造入門 第六回課題}
+\author{1029-24-9540 山崎啓太郎}
+\begin{document}
+\maketitle
+
+\section{Section 1.35}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{1.35.scm}
+\\
+\large{出力結果}\\
+(display (fixed-point (lambda (x) \\
+	(+ 1 (/ 1 x))\\
+) 1.0))\\
+=$>$ 1.6180371352785146\\
+\\
+\section{Section 1.41}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{1.41.scm}
+\\
+\large{出力結果}\\
+(display (((double (double double)) inc) 5))\\
+=$>$ 21\\
+\\
+\section{Section 1.42}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{1.42.scm}
+\\
+\large{出力結果}\\
+(display ((compose square inc) 6))\\
+=$>$ 49
+\\
+\section{Section 1.43}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{1.43.scm}
+\\
+\large{出力結果}\\
+(display ((repeated square 2) 5))\\
+=$>$ 625\\
+\\
+
+
+\end{document}

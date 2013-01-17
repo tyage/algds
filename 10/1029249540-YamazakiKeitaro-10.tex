@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+\title{アルゴリズムとデータ構造入門 第九回課題}
+\author{1029-24-9540 山崎啓太郎}
+\begin{document}
+\maketitle
+
+\section{square-limit}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{square-limit.scm}
+\\
+\\
+\section{letter-lambda色付}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{lambda.scm}
+\\
+{\large 実行例}\\
+(load "init.lsp")\\
+(load "lambda.scm")\\
+(set-color '\#xfccc77)\\
+(filled-letterlambda frm1)\\
+\\
+{\large 出力}\\
+letter-lambda.jpgを添付してあります。\\
+\\
+\section{letter-lambdaをsquare-limitに適用}
+{\large 実行例}\\
+(load "init.lsp")\\
+(load "lambda.scm")\\
+(load "square-limit.scm")\\
+(set-color '\#xfccc77)\\
+((square-limit filled-letterlambda 5) frm1)\\
+\\
+{\large 出力}\\
+square-limit.jpgを添付してあります。\\
+\\
+\end{document}

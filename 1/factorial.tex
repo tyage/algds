@@ -1,0 +1,26 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+\begin{document}
+\title{Code of factorial}
+\author{Yamazaki Keitaro 1029-24-9540}
+\date{\today}
+\maketitle
+
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{factorial.scm}
+
+{\large Run:}\\
+  (factorial 100)\\
+\\
+{\large Result:}\\
+  933262154439441526816992388562667004907159682643816214685929638\\
+  952175999932299156089414639761565182862536979208272237582511852\\
+  10916864000000000000000000000000\\
+\\
+{\large Description:}\\
+  This is a function which calculate factorial.\\
+  Argument n multiply by (factorial (- n 1)).\\
+  Next, argument m(=(- n 1)) multiply by (factorial (- m 1)) ... and so on.\\
+  When argument is 0 and under, then return 1.\\
+\\
+\end{document}

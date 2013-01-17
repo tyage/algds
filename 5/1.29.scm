@@ -1,0 +1,35 @@
+(define sum (lambda (term a next b)
+	(define iter (lambda(a result)
+		(if (> a b)
+			result
+			(iter (next a) (+ result (term a)))
+		)
+	))
+	(iter a 0)
+))
+
+(define simpson-integral (lambda(f a b n)
+	(define h (/ (- b a) n))
+	(define term (lambda (k)
+		(f (+ a (* h k)))
+	))
+	(define next (lambda(k)
+		(+ k 2)
+	))
+	(* (/ h 3) (+ 
+		(f a)
+		(* 4 (sum term 1 next (- n 1)))
+		(* 2 (sum term 2 next (- n 2)))
+		(f b)
+	))
+))
+
+(define integral (lambda(f a b n)
+	(define h (/ (- b a) n))
+	(* (sum (lambda (k) (f (+ a (* h k))))
+		0
+		(lambda (k) (+ k 1)) 
+		n)
+	h)
+))
+

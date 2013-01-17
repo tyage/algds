@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{listings}
+\title{アルゴリズムとデータ構造入門 第九回課題}
+\author{1029-24-9540 山崎啓太郎}
+\begin{document}
+\maketitle
+
+\section{微分システム}
+\lstset{numbers=left,basicstyle=\small}
+\lstinputlisting{diff.scm}
+\\
+\section{微分システムの実行例}
+累乗は(** b e)で表現するとする\\
+\\
+$>$(deriv '(+ x 2) 'x)\\
+1\\
+\\
+$>$(deriv '(- 2 x) 'x)\\
+-1\\
+\\
+$>$(deriv '(* x 2) 'x)\\
+2\\
+\\
+$>$(deriv '(/ x 2) 'x)\\
+0.5\\
+\\
+$>$(deriv '(/ 2 x) 'x)\\
+(/ -2 (* x x))\\
+\\
+$>$(deriv '(** x 4) 'x)\\
+(* 4 (** x 3))\\
+\\
+$>$(deriv '(- (** x y) (* (+ (/ z x) x) x)) 'x)\\
+(+ (* y (** x (+ y -1))) (* -1 (+ (* x (+ (/ (* -1 z) (* x x)) 1)) (+ (/ z x) x))))\\
+
+
+\end{document}
