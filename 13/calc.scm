@@ -1,3 +1,6 @@
+; Thanks to @sielico
+; He is the main writer :-)
+
 (define square (lambda (x) (* x x)))
 (define attach-tag (lambda (type-tag contents)
   (if (eq? type-tag 'scheme-number)
