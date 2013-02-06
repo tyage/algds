@@ -1,7 +1,7 @@
-\documentclass[a4paper,12pt]{article}
+﻿\documentclass[a4paper,12pt]{article}
 \usepackage{listings}
-\title{���르�ꥺ��ȥǡ�����¤���� ��޲����}
-\author{1029-24-9540 ���근��Ϻ}
+\title{アルゴリズムとデータ構造入門 第五回課題}
+\author{1029-24-9540 山崎啓太郎}
 \begin{document}
 \maketitle
 
@@ -9,32 +9,32 @@
 \lstset{numbers=left,basicstyle=\small}
 \lstinputlisting{1.29.scm}
 \\
-\large{���Ϸ��}\\
+\large{出力結果}\\
 (simpson-integral (lambda (x) (* x x x)) 0 1 100) =$>$ 0.25\\
 (simpson-integral (lambda (x) (* x x x)) 0 1 1000) =$>$ 0.25\\
 (integral (lambda (x) (* x x x)) 0 1 1000) =$>$ 0.25050025000000004\\
 (integral (lambda (x) (* x x x)) 0 1 100) =$>$ 0.25502500000000006\\
 \\
-\large{��ӷ��}\\
-integral��n�����䤹���Ȥ�0.25�˶�Ť��Ƥ��뤳�Ȥ��狼�롣\\
-simpson�θ�����Ȥä���硢ʬ��������ʤ��Ƥ����Τ��ͤ��Ф롣\\
+\large{比較結果}\\
+integralはnを増やすごとに0.25に近づいていることがわかる。\\
+simpsonの公式を使った場合、分割数が少なくても正確な値が出る。\\
 \\
 \section{Section 1.31}
 \lstset{numbers=left,basicstyle=\small}
 \lstinputlisting{1.31.scm}
 \\
-\large{a.���Ϸ��}\\
+\large{a.出力結果}\\
 (pi 80) =$>$ 3.1513038442382775\\
 \\
-JAKLD�Ǥ�n=80�ޤǤ������ϤǤ��ʤ��ä����ᡢ�ʲ���gauche�Ǽ¹Ԥ�����\\
+JAKLDではn=80までしか出力できなかったため、以下はgaucheで実行した。\\
 \\
 (display (exact-$>$inexact (pi 1000))) =$>$ 3.142377365093878\\
 (display (exact-$>$inexact (pi 10000))) =$>$ 3.1416711865344635\\
 \\
-n�������뤴�Ȥ˦Ф˶�Ť��Ƥ��뤳�Ȥ��狼�롣\\
+nが増えるごとにπに近づいていることがわかる。\\
 \\
-\large{b.�Ƶ�����ȿ�����ε������}\\
-�Ƶ�����product-recur��ȿ������product-iter��������Ƥ��롣\\
+\large{b.再帰型、反復型の級数の積}\\
+再帰型はproduct-recur、反復型はproduct-iterで定義してある。\\
 
 
 \end{document}

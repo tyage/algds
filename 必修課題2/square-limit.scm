@@ -21,7 +21,6 @@
 				(beside (below painter top-left)
 					(below bottom-right corner) ))))))
 
-
 (define square-limit (lambda (painter n)
 	(let ((quarter (corner-split painter n)) )
 		(let ((half (beside (flip-horiz quarter) quarter)))

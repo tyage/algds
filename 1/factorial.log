@@ -1,11 +1,24 @@
-This is pTeXk, Version 3.141592-p3.1.11 (euc) (Web2C 7.5.4) (format=platex 2012.10.6)  9 OCT 2012 20:36
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.4 (utf8.euc) (TeX Live 2012/Debian) (format=platex 2013.2.1)  7 FEB 2013 07:17
+entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **factorial.tex
 (./factorial.tex
-pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2009/09/24> patch level 0)
-(/usr/share/texmf-texlive/tex/latex/base/article.cls
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
+hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
+ czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
+n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
+reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
+ sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
+n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
+speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
+lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
+celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, th
+ai, loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count81
@@ -21,7 +34,7 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen118
 )
 (/home/tyage/texmf/tex/latex/listings/listings.sty
-(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
@@ -75,14 +88,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 (./factorial.scm
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 3.
- (/usr/share/texmf-texlive/tex/latex/base/omlcmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 3.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
 
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -97,12 +110,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ] (./factorial.aux) ) 
 Here is how much of TeX's memory you used:
- 1479 strings out of 257674
- 20836 string characters out of 1191153
- 73129 words of memory out of 3000000
- 4689 multiletter control sequences out of 10000+50000
- 13149 words of font info for 51 fonts, out of 2000000 for 2000
- 14 hyphenation exceptions out of 8191
- 30i,6n,32p,172b,1183s stack positions out of 5000i,500n,6000p,200000b,40000s
+ 1479 strings out of 494061
+ 20891 string characters out of 3158059
+ 77404 words of memory out of 3000000
+ 4958 multiletter control sequences out of 15000+200000
+ 13160 words of font info for 51 fonts, out of 3000000 for 9000
+ 745 hyphenation exceptions out of 8191
+ 30i,6n,32p,172b,1153s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on factorial.dvi (1 page, 1492 bytes).
+Output written on factorial.dvi (1 page, 1496 bytes).

@@ -1,15 +1,15 @@
-\documentclass[a4paper,12pt]{article}
+﻿\documentclass[a4paper,12pt]{article}
 \usepackage{listings}
-\title{���르�ꥺ��ȥǡ�����¤���� �载�������}
-\author{1029-24-9540 ���근��Ϻ}
+\title{アルゴリズムとデータ構造入門 第十三回課題}
+\author{1029-24-9540 山崎啓太郎}
 \begin{document}
 \maketitle
 
-\section{�Ȥ߹��߿���ͭ������ʣ�ǿ������ƥ�����礷�����ѻ��ѥ����ƥ�}
+\section{組み込み数・有理数・複素数システムを統合した汎用算術システム}
 \lstset{numbers=left,basicstyle=\small}
 \lstinputlisting{calc.scm}
 \\
-\section{�¹���}
+\section{実行例}
 (make-scheme-number 5) =$>$ 5\\
 (make-rational 5 6) =$>$ (rational 5 . 6)\\
 (make-real 5.6) =$>$ (real . 5.6)\\
@@ -29,15 +29,15 @@
 (add (make-complex-from-real-imag 5 3) (make-complex-from-real-imag 5 -3)) =$>$ 10\\
 (add (make-complex-from-real-imag 2 1) (make-complex-from-real-imag 2.5 -1)) =$>$ (real . 4.5)\\
 \\
-\section{����}
-make-scheme-number:��������������ؿ�\\
-make-rational:ʬ���ʬ�Ҥ���ͭ��������������ؿ�\\
-make-real:�¿�����������ؿ�\\
-make-complex-from-real-imag:�����ȵ�������ʣ�ǿ�����������ؿ�\\
-make-complex-from-mag-ang:Ⱦ�¤ȳ��٤���ʣ�ǿ�����������ؿ�\\
-�ޤ��������ؤ�scheme-number->rational->real->complex�Ǥ��ꡢraise�ؿ��ˤ�äƷ����ؤ�夲�뤳�Ȥ��Ǥ��롣\\
-�դˡ������ؤ򲼤������drop�ؿ���Ȥ���\\
-��§�黻�Ѥδؿ����Ѱդ���Ƥ��ꤽ�줾�졢add(��)��sub(��)��mul(��)��div(��)�Ǥ��롣\\
-�ޤ���������simplification�ؿ����ƤФ�뤳�Ȥˤ�ꡢ�黻��̤δ�ά�����Ԥ��Ƥ��롣\\
+\section{説明}
+make-scheme-number:整数を生成する関数\\
+make-rational:分母と分子から有理数を生成する関数\\
+make-real:実数を生成する関数\\
+make-complex-from-real-imag:実部と虚部から複素数を生成する関数\\
+make-complex-from-mag-ang:半径と角度から複素数を生成する関数\\
+また、型階層はscheme-number-$>$rational-$>$real-$>$complexであり、raise関数によって型階層を上げることができる。\\
+逆に、型階層を下げる場合はdrop関数を使う。\\
+四則演算用の関数が用意されておりそれぞれ、add(和)、sub(差)、mul(積)、div(商)である。\\
+また、内部でsimplification関数が呼ばれることにより、演算結果の簡略化が行われている。\\
 
 \end{document}

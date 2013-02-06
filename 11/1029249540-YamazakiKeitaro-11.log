@@ -1,11 +1,24 @@
-This is pTeXk, Version 3.141592-p3.1.11 (euc) (Web2C 7.5.4) (format=platex 2012.10.6)  25 DEC 2012 09:18
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.4 (utf8.euc) (TeX Live 2012/Debian) (format=platex 2013.2.1)  7 FEB 2013 07:20
+entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **1029249540-YamazakiKeitaro-11.tex
 (./1029249540-YamazakiKeitaro-11.tex
-pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2009/09/24> patch level 0)
-(/usr/share/texmf-texlive/tex/latex/base/article.cls
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
+hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
+ czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
+n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
+reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
+ sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
+n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
+speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
+lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
+celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, th
+ai, loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count81
@@ -21,7 +34,7 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen118
 )
 (/home/tyage/texmf/tex/latex/listings/listings.sty
-(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
@@ -49,7 +62,7 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-No file 1029249540-YamazakiKeitaro-11.aux.
+(./1029249540-YamazakiKeitaro-11.aux)
 \openout1 = `1029249540-YamazakiKeitaro-11.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -77,9 +90,10 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 8.
-(./complex.scm
+ (./complex.scm
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -135,7 +149,7 @@ Overfull \hbox (490.38916pt too wide) in paragraph at lines 32--34
  []
 
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 36.
-(/usr/share/texmf-texlive/tex/latex/base/omlcmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
@@ -175,7 +189,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.12 \section
-             {º¬π‘Œ„}
+             {ÂÆüË°å‰æã}
 ? 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 13.
@@ -199,18 +213,18 @@ ake-from-real-
 
 [2]
 Overfull \hbox (17.62062pt too wide) in paragraph at lines 28--33
-[]\JY1/mc/m/n/12 ¥ Œ¨≤Ω§œ °¢ \OT1/cmr/m/n/12 make-from-real-imag \JY1/mc/m/n/12
- ¥ÿøÙ§«¿∏¿Æ§µ§Ï§ø £¡«øÙ§Ú ∏ª˙ŒÛ≤Ω§π§Î \OT1/cmr/m/n/12 stringify-
+[]\JY1/mc/m/n/12 Á∞°Áï•Âåñ„ÅØ „ÄÅ \OT1/cmr/m/n/12 make-from-real-imag \JY1/mc/m/n/12
+ Èñ¢Êï∞„ÅßÁîüÊàê„Åï„Çå„ÅüË§áÁ¥†Êï∞„ÇíÊñáÂ≠óÂàóÂåñ„Åô„Çã \OT1/cmr/m/n/12 stringify-
  []
 
 [3] (./1029249540-YamazakiKeitaro-11.aux) ) 
 Here is how much of TeX's memory you used:
- 1491 strings out of 257674
- 21144 string characters out of 1191153
- 90140 words of memory out of 3000000
- 4701 multiletter control sequences out of 10000+50000
- 15296 words of font info for 59 fonts, out of 2000000 for 2000
- 14 hyphenation exceptions out of 8191
- 29i,6n,32p,225b,1683s stack positions out of 5000i,500n,6000p,200000b,40000s
+ 1493 strings out of 494061
+ 21267 string characters out of 3158059
+ 100404 words of memory out of 3000000
+ 4970 multiletter control sequences out of 15000+200000
+ 15309 words of font info for 59 fonts, out of 3000000 for 9000
+ 745 hyphenation exceptions out of 8191
+ 29i,6n,32p,225b,1526s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 1029249540-YamazakiKeitaro-11.dvi (3 pages, 14132 bytes).
+Output written on 1029249540-YamazakiKeitaro-11.dvi (3 pages, 14128 bytes).

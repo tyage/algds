@@ -1,0 +1,421 @@
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.4 (utf8.euc) (TeX Live 2012/Debian) (format=platex 2013.2.1)  7 FEB 2013 07:10
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**1029249540-YamazakiKeitaro-15.tex
+(./1029249540-YamazakiKeitaro-15.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
+hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
+ czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
+n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
+reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
+ sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
+n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
+speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
+lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
+celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, th
+ai, loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen118
+)
+(/home/tyage/texmf/tex/latex/listings/listings.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\lst@mode=\count89
+\lst@gtempboxa=\box41
+\lst@token=\toks16
+\lst@length=\count90
+\lst@currlwidth=\dimen119
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen120
+\lst@width=\dimen121
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen122
+
+(/home/tyage/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box42
+)
+(/home/tyage/texmf/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(./1029249540-YamazakiKeitaro-15.aux
+! Text line contains an invalid character.
+l.4 ...section}{\numberline {2}square-limitぁ‥^^@
+                                                  　�}{2}}
+? 
+! Text line contains an invalid character.
+l.6 ...ne {section}{\numberline {3}空間充填供＼^^@
+                                                  　1次　　　＼�}{3}}
+? 
+)
+\openout1 = `1029249540-YamazakiKeitaro-15.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+\c@lstlisting=\count97
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 6.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 8.
+ (./painter.scm
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 3.
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 6--7
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.76465pt too wide) in paragraph at lines 11--12
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.76465pt too wide) in paragraph at lines 12--13
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 13--14
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (76.47485pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.76465pt too wide) in paragraph at lines 18--19
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.76465pt too wide) in paragraph at lines 19--20
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 20--21
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (76.47485pt too wide) in paragraph at lines 21--22
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 25--26
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 26--27
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 27--28
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 28--29
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[1
+
+]
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 32--33
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 33--34
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 34--35
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section
+             {square-limitに適用}
+? 
+(./perorin-square-limit.scm [2]) (./hilbert.scm
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+
+Overfull \hbox (37.05444pt too wide) in paragraph at lines 10--11
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.76465pt too wide) in paragraph at lines 11--12
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 12--13
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 13--14
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 15--16
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (37.05444pt too wide) in paragraph at lines 25--26
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 26--27
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 27--28
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 28--29
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 29--30
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 30--31
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[3]
+Overfull \hbox (30.48438pt too wide) in paragraph at lines 40--41
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.90479pt too wide) in paragraph at lines 41--42
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 42--43
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 43--44
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 44--45
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 45--46
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (37.05444pt too wide) in paragraph at lines 55--56
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.76465pt too wide) in paragraph at lines 56--57
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 57--58
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 58--59
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.9143pt too wide) in paragraph at lines 59--60
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 60--62
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.77417pt too wide) in paragraph at lines 70--71
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (83.04492pt too wide) in paragraph at lines 71--72
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[4]
+Overfull \hbox (63.33472pt too wide) in paragraph at lines 76--78
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (./snowflake.scm
+Overfull \hbox (17.34424pt too wide) in paragraph at lines 12--13
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (43.62451pt too wide) in paragraph at lines 13--14
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (43.62451pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (43.62451pt too wide) in paragraph at lines 15--16
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (83.04492pt too wide) in paragraph at lines 16--18
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.77417pt too wide) in paragraph at lines 26--27
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (83.04492pt too wide) in paragraph at lines 27--28
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[5]
+Overfull \hbox (76.47485pt too wide) in paragraph at lines 37--38
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (76.47485pt too wide) in paragraph at lines 38--39
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (122.46533pt too wide) in paragraph at lines 39--41
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [6] (./1029249540-YamazakiKeitaro-15.aux) ) 
+Here is how much of TeX's memory you used:
+ 1499 strings out of 494061
+ 21360 string characters out of 3158059
+ 107404 words of memory out of 3000000
+ 4967 multiletter control sequences out of 15000+200000
+ 14694 words of font info for 57 fonts, out of 3000000 for 9000
+ 745 hyphenation exceptions out of 8191
+ 30i,6n,32p,222b,1526s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on 1029249540-YamazakiKeitaro-15.dvi (6 pages, 31784 bytes).

@@ -1,15 +1,15 @@
-\documentclass[a4paper,12pt]{article}
+﻿\documentclass[a4paper,12pt]{article}
 \usepackage{listings}
-\title{���르�ꥺ��ȥǡ�����¤���� �������}
-\author{1029-24-9540 ���근��Ϻ}
+\title{アルゴリズムとデータ構造入門 第九回課題}
+\author{1029-24-9540 山崎啓太郎}
 \begin{document}
 \maketitle
 
-\section{ʣ�ǿ������ƥ�}
+\section{複素数システム}
 \lstset{numbers=left,basicstyle=\small}
 \lstinputlisting{complex.scm}
 \\
-\section{�¹���}
+\section{実行例}
 (stringify-complex (make-from-real-imag 3 4)) =$>$ "3+4i"\\
 (stringify-complex (make-from-real-imag 3 0)) =$>$ "3"\\
 (stringify-complex (make-from-real-imag 0 3)) =$>$ "3i"\\
@@ -24,11 +24,11 @@
 (stringify-complex (div-complex (make-from-real-imag 3 -1) (make-from-real-imag 2 4))) =$>$ "0.1-0.7i"\\
 (stringify-complex (make-from-real-imag (make-from-real-imag 3 -1) (make-from-real-imag 2 4))) =$>$ "-1+i"\\
 \\
-\section{����}
-make-from-real-imag�ؿ���Ȥäơ�x+iy�Ȥʤ����ʣ�ǿ����������Ƥ��롣\\
-add-complex��sub-complex��mul-complex��div-complex�ؿ��ˤƻ�§�黻����ǽ�Ǥ��롣\\
-�ޤ���make-from-real-imag�ؿ��ˤ�ʣ�ǿ����Ϥ����Ȥ�Ǥ������κݤˤ��֤��ͤ�����ˤʤ�褦�׻�����롣\\
-��ά���ϡ�make-from-real-imag�ؿ����������줿ʣ�ǿ���ʸ���󲽤���stringify-complex�ؿ��ˤƹԤʤäƤ��롣\\
-��Ȥ��ơ���ά������ʤ���"0+1i"��ɽ��������Τ���"i"��ɽ�������褦�ʽ���������Ƥ��롣�ʤ���¾����ϼ¹����ͭ��\\
+\section{説明}
+make-from-real-imag関数を使って、x+iyとなる形の複素数を生成している。\\
+add-complex、sub-complex、mul-complex、div-complex関数にて四則演算が可能である。\\
+また、make-from-real-imag関数には複素数を渡すこともでき、その際には返り値が完結になるよう計算される。\\
+簡略化は、make-from-real-imag関数で生成された複素数を文字列化するstringify-complex関数にて行なっている。\\
+例として、簡略化されないと"0+1i"と表示されるものが、"i"と表示されるような処理がされている。（その他の例は実行例に有）\\
 
 \end{document}

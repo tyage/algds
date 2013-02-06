@@ -1,27 +1,27 @@
-\documentclass[a4paper,12pt]{article}
+﻿\documentclass[a4paper,12pt]{article}
 \usepackage{listings}
-\title{���르�ꥺ��ȥǡ�����¤���� ��Ͳ����}
-\author{1029-24-9540 ���근��Ϻ}
+\title{アルゴリズムとデータ構造入門 第四回課題}
+\author{1029-24-9540 山崎啓太郎}
 \begin{document}
 \maketitle
 
-\section{Ackermann�ؿ�}
+\section{Ackermann関数}
 \lstset{numbers=left,basicstyle=\small}
 \lstinputlisting{ack.scm}
 
-\section{���Ϸ��}
+\section{出力結果}
 (ack 0 2) =$>$ 3\\
 (ack 1 2) =$>$ 4\\
 (ack 0 2) =$>$ 7\\
 (ack 0 2) =$>$ 29\\
 
-\section{���ʽ���������Ex1.5}
-{\large ���Ϥ�����Ū�����ɾ���λ�}\\
-(test 0 (p))��ɾ���������������Ǥ���0, (p)��ɾ������롣\\
-��������p��p���Ȥ�ɾ������ؿ��Ǥ��뤿�ᡢ̵�¥롼�פ��׻�����λ���ʤ���\\
+\section{教科書練習問題Ex1.5}
+{\large 解釈系が作用的順序の評価の時}\\
+(test 0 (p))が評価される時、引数である0, (p)が評価される。\\
+しかし、pはp自身を評価する関数であるため、無限ループし計算が終了しない。\\
 \\
-{\large ���Ϥ����������ɾ���λ�}\\
-(test 0 (p))��ɾ����������(if (= x 0) 0 y)��ɾ�����졢\\
-x��0�Ǥ��뤳�Ȥ���0���֤���\\
+{\large 解釈系が正規順序の評価の時}\\
+(test 0 (p))が評価される時、(if (= x 0) 0 y)が評価され、\\
+xが0であることから0を返す。\\
 
 \end{document}
