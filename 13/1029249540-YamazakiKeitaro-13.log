@@ -1,4 +1,4 @@
-This is pTeXk, Version 3.141592-p3.1.11 (euc) (Web2C 7.5.4) (format=platex 2012.10.6)  17 JAN 2013 13:54
+This is pTeXk, Version 3.141592-p3.1.11 (euc) (Web2C 7.5.4) (format=platex 2012.10.6)  18 JAN 2013 01:54
  %&-line parsing enabled.
 **1029249540-YamazakiKeitaro-13.tex
 (./1029249540-YamazakiKeitaro-13.tex
@@ -49,7 +49,7 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-No file 1029249540-YamazakiKeitaro-13.aux.
+(./1029249540-YamazakiKeitaro-13.aux)
 \openout1 = `1029249540-YamazakiKeitaro-13.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -77,9 +77,10 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 8.
-(./calc.scm
+ (./calc.scm
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -127,7 +128,27 @@ Overfull \hbox (10.77417pt too wide) in paragraph at lines 224--225
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[6] [7]
+[6]
+Overfull \hbox (50.19458pt too wide) in paragraph at lines 245--246
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.19458pt too wide) in paragraph at lines 247--248
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.19458pt too wide) in paragraph at lines 249--250
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.19458pt too wide) in paragraph at lines 251--252
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[7]
 Overfull \hbox (102.75513pt too wide) in paragraph at lines 295--296
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -139,7 +160,7 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 309.
-)
+) [8]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -152,14 +173,14 @@ l.12 \section
 ? 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 13.
-[8] [9] (./1029249540-YamazakiKeitaro-13.aux) ) 
+[9] [10] (./1029249540-YamazakiKeitaro-13.aux) ) 
 Here is how much of TeX's memory you used:
- 1491 strings out of 257674
- 21132 string characters out of 1191153
+ 1493 strings out of 257674
+ 21200 string characters out of 1191153
  96141 words of memory out of 3000000
  4701 multiletter control sequences out of 10000+50000
  15296 words of font info for 59 fonts, out of 2000000 for 2000
  14 hyphenation exceptions out of 8191
  29i,6n,32p,225b,1683s stack positions out of 5000i,500n,6000p,200000b,40000s
 
-Output written on 1029249540-YamazakiKeitaro-13.dvi (9 pages, 55168 bytes).
+Output written on 1029249540-YamazakiKeitaro-13.dvi (10 pages, 57152 bytes).

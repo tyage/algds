@@ -25,6 +25,9 @@
 (sub (make-complex-from-real-imag 33 5) (make-real 4.5)) =$>$ (complex rectangular 28.5 . 5)\\
 (mul (make-scheme-number 5) (make-complex-from-mag-ang 5 2)) =$>$ (complex polar 25.0 . 2.0)\\
 (div (make-rational 33 5) (make-real 4.5)) =$>$ (real . 1.4666666666666666)\\
+(div (make-rational 33 1) (make-real 3)) =$>$ 11\\
+(add (make-complex-from-real-imag 5 3) (make-complex-from-real-imag 5 -3)) =$>$ 10\\
+(add (make-complex-from-real-imag 2 1) (make-complex-from-real-imag 2.5 -1)) =$>$ (real . 4.5)\\
 \\
 \section{説明}
 make-scheme-number:整数を生成する関数\\
@@ -33,7 +36,8 @@ make-real:実数を生成する関数\\
 make-complex-from-real-imag:実部と虚部から複素数を生成する関数\\
 make-complex-from-mag-ang:半径と角度から複素数を生成する関数\\
 また、型階層はscheme-number->rational->real->complexであり、raise関数によって型階層を上げることができる。\\
-逆に、型階層を下げる場合はdrop関数を使い、簡略化はそれによって行われる。\\
+逆に、型階層を下げる場合はdrop関数を使う。\\
 四則演算用の関数が用意されておりそれぞれ、add(和)、sub(差)、mul(積)、div(商)である。\\
+また、内部でsimplification関数が呼ばれることにより、演算結果の簡略化が行われている。\\
 
 \end{document}
